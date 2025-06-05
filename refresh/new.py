@@ -56,7 +56,7 @@
 
 # for AND while
 
-list = ["Ece" , "AIML" , "CSE" , "EEE" , "CIVIL"]
+# list = ["Ece" , "AIML" , "CSE" , "EEE" , "CIVIL"]
 
 # for dept in list:
 #     print(dept)
@@ -65,11 +65,11 @@ list = ["Ece" , "AIML" , "CSE" , "EEE" , "CIVIL"]
 #     print(index , " : " , list[index])
 
 
-for x in range ( 4 , -1 , -1):
-    if x == 3:
-        continue
+# for x in range ( 4 , -1 , -1):
+#     if x == 3:
+#         continue
     
-    print("x" , x)
+#     print("x" , x)
 
 # count = 0
 
