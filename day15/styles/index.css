@@ -1,0 +1,40 @@
+body{
+    background-color: teal;
+}
+#todo-container{
+    border: 1px solid blue;
+    width: 30%;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
+}
+#main-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+#input-container{
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.done{
+    background-color: green;
+}
+.pending{
+    background-color: red;
+}
