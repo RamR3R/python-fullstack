@@ -1,0 +1,99 @@
+body{
+    background-color: antiquewhite;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.iplTeam {
+    border : 1px solid;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 10%;
+    /* text-decoration: wavy underline; */
+    /* letter-spacing: 20px; */
+    /* text-shadow: 1px 3px 1px rgb(0, 0, 0); */
+    height: 200px;
+}
+
+.iplTeam:hover{
+    flex-grow: 1;
+}
+
+#cup{
+    color : white
+}
+
+.ipl-team-container{
+    /* background-color: skyblue; */
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(72, 23, 23);
+    border-radius: 20px;
+    /* height: 100px; */
+    background-color: rgb(255, 186, 186);
+
+    /* background-image: url('./image.png'); */
+    background-size: contain;
+    background-repeat: repeat;
+    /* backdrop-filter: blur(100px); */
+
+    /* height: 200px; */
+
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; */
+
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+
+
+}
+
+.logo-container{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 1px solid;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(24, 210, 191) !important;
+
+        position: sticky;
+    top:0px;
+
+
+
+    /* bottom:0px ; */
+    /* right: 0px; */
+}
+
+.animation-move{
+    animation: fade 1s infinite alternate;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 25%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 75%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
