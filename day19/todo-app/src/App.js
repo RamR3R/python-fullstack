@@ -4,10 +4,11 @@ import List from './Components/List';
 import Form from './Components/Form'; 
 import { useState } from 'react';
 import Counter from './Components/Counter';
+import TodoApp from './TodoApp';
 
 function App() {
 
-  const [players , setPlayers] = useState([]);
+  // const [players , setPlayers] = useState([]);
 
   // setPlayers([
   //           {name : "Jaiswal", age :22}, 
@@ -16,19 +17,20 @@ function App() {
   //           {name : "MSD" , age : 43}
   //         ])
   
-  const handleChange = ( newPlayer )=>{
+  // const handleChange = ( newPlayer )=>{
     
-    const newPlayersList = [...players];
-    newPlayersList.push(newPlayer);
-    setPlayers(newPlayersList);
-    console.log(newPlayersList);
-  }
+  //   const newPlayersList = [...players];
+  //   newPlayersList.push(newPlayer);
+  //   setPlayers(newPlayersList);
+  //   console.log(newPlayersList);
+  // }
 
   return (
     <div>
       {/* <List list={players} />
       <Form handleChange={handleChange}  /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <TodoApp />
     </div>
   );
 }
