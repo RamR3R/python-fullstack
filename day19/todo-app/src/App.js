@@ -3,6 +3,7 @@ import './App.css';
 import List from './Components/List';
 import Form from './Components/Form'; 
 import { useState } from 'react';
+import Counter from './Components/Counter';
 
 function App() {
 
@@ -25,8 +26,9 @@ function App() {
 
   return (
     <div>
-      <List list={players} />
-      <Form handleChange={handleChange}  />
+      {/* <List list={players} />
+      <Form handleChange={handleChange}  /> */}
+      <Counter />
     </div>
   );
 }
