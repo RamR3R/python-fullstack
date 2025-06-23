@@ -80,3 +80,4 @@
 
 
 
+list = list(map(int, input().strip().split())) #for input like 1 2 3 4 5 => to [1,2,3,4,5]
