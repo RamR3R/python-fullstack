@@ -18,7 +18,7 @@ sub_sum = arr[i]
 #         longest = max(j - i + 1 , longest)
 #         j += 1
 #         sub_sum += arr[j]
-
+target = 3
 sum = 0
 prefix_sum = {}
 arr = [-10,-1,-1,2,0,4,-1,8]
