@@ -22,14 +22,47 @@ head.next.next = Node(300)
 head.next.next.next = Node(400)
 head.next.next.next.next = Node(500) #tail node
 
-result = []
+# length = 0
+def display_linked_list(current):
+    result = []
+    while current != None:
+        result.append(str(current.val))
+        current = current.next
+    print(' => '.join(result))
 
+#add item to the tail of LinkedList
+# current = head
+# while current.next != None:
+#     current = current.next
+
+# current.next = Node(int(input()))
+
+# display_linked_list(head)
+
+# newNode = Node(int(input()))
+# newNode.next = head
+
+# head = newNode
+
+#insert at particular position
+position = 1
+value = 250
+
+newNode = Node(value)
 current = head
+node_position = 0
+
+if position == 1:
+    newNode.next = head
+    head = newNode
 
 while current != None:
-    print(current.val , end=" ") #current value will be printed
+    node_position += 1
+    if node_position == position - 1:
+        temp = current.next
+        current.next = newNode
+        newNode.next = temp
+    
     current = current.next
 
-# print('=>'.join(result))
-
-# print(head)
+display_linked_list(head)
