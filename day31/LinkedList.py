@@ -5,10 +5,22 @@ class Node:
         self.val = value
         self.next = nextNode    
 
-item1 = Node(100)
-item2 = Node(200)
-item3 = Node(300)
-item4 = Node(400)
-item5 = Node(500)
+# item1 = Node(100) #head
+# item2 = Node(200)
+# item3 = Node(300)
+# item4 = Node(400)
+# item5 = Node(500) #tail node
 
-print(item3.val)
+# item1.next = item2
+# item2.next = item3
+# item3.next = item4
+# item4.next = item5
+
+# head = Node(100)
+# head.next = Node(200)
+# head.next.next = Node(300)
+# head.next.next.next = Node(400)
+# head.next.next.next.next = Node(500) #tail node
+
+
+# print(head)
