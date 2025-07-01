@@ -16,11 +16,20 @@ class Node:
 # item3.next = item4
 # item4.next = item5
 
-# head = Node(100)
-# head.next = Node(200)
-# head.next.next = Node(300)
-# head.next.next.next = Node(400)
-# head.next.next.next.next = Node(500) #tail node
+head = Node(100) # head node
+head.next = Node(200)
+head.next.next = Node(300)
+head.next.next.next = Node(400)
+head.next.next.next.next = Node(500) #tail node
 
+result = []
+
+current = head
+
+while current != None:
+    print(current.val , end=" ") #current value will be printed
+    current = current.next
+
+# print('=>'.join(result))
 
 # print(head)
