@@ -52,17 +52,32 @@ newNode = Node(value)
 current = head
 node_position = 0
 
-if position == 1:
-    newNode.next = head
-    head = newNode
+# if position == 1:
+#     newNode.next = head
+#     head = newNode
 
-while current != None:
-    node_position += 1
-    if node_position == position - 1:
-        temp = current.next
-        current.next = newNode
-        newNode.next = temp
+# while current != None:
+#     node_position += 1
+#     if node_position == position - 1:
+#         temp = current.next
+#         current.next = newNode
+#         newNode.next = temp
     
+#     current = current.next
+
+length = 0
+current = head
+while current != None:
+    length += 1
     current = current.next
+
+current = head
+count = 0
+while current != None:
+    count += 1
+    if count == length // 2 + 1:
+        print("middle Element = " , current.val)
+    current = current.next
+
 
 display_linked_list(head)
