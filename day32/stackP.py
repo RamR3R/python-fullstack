@@ -22,12 +22,43 @@ def check_valid(exp):
     else:
         return("Invalid exp")
 
+def operate(a,b,op):
+    if op == "+": return a+b
+    elif op == "-": return a-b
+    elif op == "*": return a*b
+    elif op == "/": return a/b
+    else: return 0
+
+def eval_exp(exp):
+    stack = []
+
+    for i in exp:
+        if i != ")":
+            stack.append(i)
+        else:
+            tempStack = []
+            while stack[-1] != "(":
+                tempStack.append(stack.pop())
+
+            result = 0 + int(tempStack.pop())
+            while len(tempStack):
+                x = tempStack.pop()
+                if not x.isdigit():
+                    result = operate(result , int(tempStack[-1]) , x)
+                    tempStack.pop()
+            stack.pop()
+            stack.append(result)
+        print(stack)
+
+    return stack[-1]
+
+
 
 #main driver code
 
 exp1 = "((((2+3)))))" #only with (
-exp2 = "[{([2+3]*{6-1}*{5+4})}]"
+exp2 = "((2+3+3)+5+(2*3))"
 
 print(eval_exp(exp2))
 
-print(check_valid(exp2))
+# print(check_valid(exp2))
