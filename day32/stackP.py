@@ -1,22 +1,26 @@
+def check_valid(exp):
+    stack = []
+    for i in exp:
+        # print("current i : ", i)
+        if i == "(":
+            stack.append(i)
+        elif i == ")":
+            if len(stack) != 0:
+                stack.pop()
+            else:
+                return "Invalid exp"
+        else:
+            continue
 
-expression = "(((2)+(3)))"
-
-stack = []
-# for i in expression:
-# for i in range(0, len(expression)):
-
-for i in expression:
-    # print("current i : ", i)
-    if i == "(":
-        stack.append(i)
-    elif i == ")":
-        stack.pop()
+    if len(stack) == 0:
+        return("Valid exp")
     else:
-        continue
-    # print(stack)
+        return("Invalid exp")
 
-if len(stack) == 0:
-    print("Valid exp")
-else:
-    print("Invalid exp")
 
+#main driver code
+
+exp1 = "((((2+3)))))" #only with (
+exp2 = "[{([2+3]{6-1{5+4})}]"
+
+print(check_valid(exp2))
