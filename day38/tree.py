@@ -40,6 +40,16 @@ def levelOrder(root):
         if current.left != None : queue.append(current.left)
         if current.right != None :queue.append(current.right)
 
+def height(root):
+
+    if root == None:
+        return 0
+
+    lh = height(root.left)
+    rh = height(root.right)
+    
+    return max(lh , rh) + 1
+
 
 root = TreeNode(1)
 root.left = TreeNode(2)
@@ -63,6 +73,8 @@ inOder(root)
 
 print("\nLevel Order :")
 levelOrder(root)
+
+print("\nHeight of the tree : " , height(root))
 
 
 
